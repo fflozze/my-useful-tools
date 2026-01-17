@@ -68,9 +68,22 @@ def generate_html(data):
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Markdown & Highlight -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.2.0/marked.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+        // Configure marked to add IDs to headings with French character support
+        const renderer = {{
+            heading(text, level, raw) {{
+                const safeRaw = raw || text.replace(/<[^>]*>/g, '');
+                const slug = safeRaw.toLowerCase().trim()
+                    .replace(/[^\\w\\u00C0-\\u00FF]+/g, '-')
+                    .replace(/^-+|-+$/g, '');
+                return `<h${{level}} id="${{slug}}">${{text}}</h${{level}}>`;
+            }}
+        }};
+        marked.use({{ renderer }});
+    </script>
     
     <style>
         :root {{
@@ -475,6 +488,11 @@ def generate_html(data):
 
         function renderMarkdown(content) {{
             const display = document.getElementById('content-display');
+            const mainContent = document.getElementById('main-content');
+            
+            // Scroll to top when loading a new file
+            mainContent.scrollTop = 0;
+            
             display.innerHTML = marked.parse(content);
             hljs.highlightAll();
         }}

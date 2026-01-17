@@ -10,14 +10,14 @@ This repository aims to present the tools I use daily. Each tool has its own det
 
 The tools are sorted by category into folders:
 
-- **Backend/**: Backend frameworks, libraries, and tools.
+- **Web/**: Web frameworks and libraries (Backend & Frontend).
+- **Development/**: Development tools, IDEs, and general utilities.
 - **Design/**: Graphic design tools, UI/UX resources.
-- **Development/**: Development tools, IDEs, general frameworks.
-- **Frontend/**: Frontend frameworks, libraries, and tools.
 - **Productivity/**: Time management, note-taking, and office tools.
 - **Runtime/**: JavaScript runtimes and other execution environments.
 - **Security/**: Password managers, generators, and security tools.
-- **System/**: System tools, terminals, monitoring.
+- **System/**: System tools, OS, hardware monitoring.
+- **AI/**: Artificial Intelligence tools and local LLMs.
 - **Utilities/**: Other practical utilities.
 
 ## Contribute / Add a Tool
@@ -39,14 +39,14 @@ Ce dépôt a pour but de présenter les outils que j'utilise au quotidien. Chaqu
 
 Les outils sont triés par catégorie dans des dossiers :
 
-- **Backend/** : Frameworks, bibliothèques et outils backend.
+- **Web/** : Frameworks et bibliothèques Web (Backend & Frontend).
+- **Development/** : Outils de développement, IDEs et utilitaires généraux.
 - **Design/** : Outils de conception graphique, ressources UI/UX.
-- **Development/** : Outils de développement, IDE, frameworks généraux.
-- **Frontend/** : Frameworks, bibliothèques et outils frontend.
 - **Productivity/** : Outils de gestion de temps, prise de notes, bureautique.
 - **Runtime/** : Runtimes JavaScript et autres environnements d'exécution.
 - **Security/** : Gestionnaires de mots de passe, générateurs et outils de sécurité.
-- **System/** : Outils système, terminaux, monitoring.
+- **System/** : Outils système, OS, monitoring matériel.
+- **AI/** : Outils d'Intelligence Artificielle et LLMs locaux.
 - **Utilities/** : Autres utilitaires pratiques.
 
 ## Contribuer / Ajouter un outil
